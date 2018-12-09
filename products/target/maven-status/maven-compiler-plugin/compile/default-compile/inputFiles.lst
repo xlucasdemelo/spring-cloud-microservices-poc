@@ -1,0 +1,5 @@
+/media/lucas/Dados/Development/cloud/products/src/main/java/com/microservices/poc/domain/service/ProductService.java
+/media/lucas/Dados/Development/cloud/products/src/main/java/com/microservices/poc/domain/controller/ProductController.java
+/media/lucas/Dados/Development/cloud/products/src/main/java/com/microservices/poc/domain/repository/IProductRepository.java
+/media/lucas/Dados/Development/cloud/products/src/main/java/com/microservices/poc/domain/entities/Product.java
+/media/lucas/Dados/Development/cloud/products/src/main/java/com/microservices/poc/PocApplication.java

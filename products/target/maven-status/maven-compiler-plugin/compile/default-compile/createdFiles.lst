@@ -1,0 +1,5 @@
+com/microservices/poc/PocApplication.class
+com/microservices/poc/domain/controller/ProductController.class
+com/microservices/poc/domain/entities/Product.class
+com/microservices/poc/domain/service/ProductService.class
+com/microservices/poc/domain/repository/IProductRepository.class
