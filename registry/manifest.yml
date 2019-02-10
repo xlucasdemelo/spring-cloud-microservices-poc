@@ -1,0 +1,5 @@
+applications:
+- name: eureka
+  memory: 700MB
+  host: xbullion-service-registry
+  path: target/service-registry.jar

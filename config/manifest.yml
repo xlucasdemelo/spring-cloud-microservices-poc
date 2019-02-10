@@ -1,0 +1,4 @@
+applications:
+- name: config-server 
+  memory: 800M
+  instances: 1

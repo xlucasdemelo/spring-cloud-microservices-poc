@@ -1,0 +1,52 @@
+version: '3'
+services:
+  config-server:
+    build: ./config
+    ports:
+     - "8888:8888"
+    networks:
+      samplenet:
+        aliases:
+          - "config-server"
+  registry:
+    build: ./registry
+    ports:
+     - "8761:8761"
+    depends_on:
+     - "config-server"
+    networks:
+      samplenet:
+        aliases:
+          - "registry"
+
+  products-service:
+    build: ./products
+    ports:
+     - "8181:8181"
+    depends_on:
+     - "postgres-db"
+     - "registry"
+    links:
+      - "config-server"
+      - "postgres-db"
+    networks:
+      samplenet:
+        aliases:
+          - "products-service"
+
+  postgres-db:
+    image: "postgres"
+    # ports: 
+    #  - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    networks:
+      samplenet:
+        aliases:
+          - "postgres-db"
+
+networks:
+  samplenet:
+    driver: bridge

@@ -1,0 +1,7 @@
+applications:
+- name: product-service 
+  memory: 800MB
+  host: xbullion-product-service
+  path: target/product-service.jar
+  services:
+  - eureka
